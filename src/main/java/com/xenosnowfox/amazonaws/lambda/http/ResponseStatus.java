@@ -5,6 +5,9 @@ import java.util.Set;
 
 /**
  * Enumeration of possible Http Status response codes
+ *
+ * @since
+ *      1.0.0
  */
 public enum ResponseStatus {
 

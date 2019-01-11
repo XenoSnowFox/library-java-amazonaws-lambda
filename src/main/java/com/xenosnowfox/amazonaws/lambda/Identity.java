@@ -4,6 +4,9 @@ import org.json.JSONObject;
 
 /**
  * Immutable object that contains identity details of the source making the request
+ *
+ * @since
+ *      1.0.0
  */
 public interface Identity extends Jsonable {
 

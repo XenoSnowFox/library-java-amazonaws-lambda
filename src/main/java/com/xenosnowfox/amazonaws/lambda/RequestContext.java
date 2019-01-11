@@ -7,6 +7,9 @@ import java.time.Instant;
 
 /**
  * Immutable object that holds meta-data about the current request
+ *
+ * @since
+ *      1.0.0
  */
 public interface RequestContext extends Jsonable {
 

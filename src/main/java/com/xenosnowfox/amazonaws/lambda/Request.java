@@ -7,6 +7,9 @@ import java.util.Map;
 
 /**
  * Immutable Request object that is parsed from the Lambda input stream
+ *
+ * @since
+ *      1.0.0
  */
 public interface Request extends Jsonable {
 
