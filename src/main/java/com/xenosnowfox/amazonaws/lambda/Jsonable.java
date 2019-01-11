@@ -9,6 +9,8 @@ public interface Jsonable {
     /**
      * Obtains a JSON Object representation of the instance
      *
+     * @since
+     *      1.0.0
      * @return
      *      JSON Object
      */
