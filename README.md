@@ -57,4 +57,4 @@ If you need hep using this library, please feel free to send an email or create 
 
 ## Licence
 
-This project is licensed under **MIT License**
+The project is free software released under the MIT License. See [LICENSE](https://github.com/XenoSnowFox/library-java-amazonaws-lambda/blob/master/LICENSE) for details.
