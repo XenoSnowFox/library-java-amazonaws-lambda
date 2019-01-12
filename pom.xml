@@ -49,6 +49,7 @@
     </dependencies>
 
     <build>
+        <finalName>${project.groupId}.${project.artifactId}</finalName>
         <plugins>
             <!-- Run Unit Tests -->
             <plugin>
