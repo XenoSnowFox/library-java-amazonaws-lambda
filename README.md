@@ -1,8 +1,8 @@
 # Amazon AWS Lambda Support Library
 
-[![License](https://img.shields.io/github/license/xenosnowfox/library-java-amazonaws-lambda.svg)](https://opensource.org/licenses/MIT)
-
 Support library for working with AWS Lambda functions.
+
+[![License](https://img.shields.io/github/license/xenosnowfox/library-java-amazonaws-lambda.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
