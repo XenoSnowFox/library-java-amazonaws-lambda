@@ -29,19 +29,9 @@ import java.io.OutputStreamWriter;
  * </code></pre>
  *
  */
-public abstract class AbstractLambdaHandler implements RequestStreamHandler {
+public abstract class AbstractLambdaHandler implements RequestStreamHandler, LambdaHandler {
 
     private Context context;
-
-    /**
-     * Handles the given request and returns the response to send back to the sender.
-     *
-     * @param request
-     *      Incoming request details
-     * @return
-     *      Response object
-     */
-    public abstract Response handle(final Request request);
 
     /**
      * Obtains the current Lambda Context provided by Amazon AWS
