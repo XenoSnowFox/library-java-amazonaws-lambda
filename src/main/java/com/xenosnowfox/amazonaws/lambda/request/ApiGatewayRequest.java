@@ -49,16 +49,14 @@ public class ApiGatewayRequest implements Request {
             for (String key : jsonObject.keySet()) {
 
                 JSONArray jsonArray = jsonObject.optJSONArray(key);
-                if (jsonArray != null) {
-                    List<String> list = new Vector<>();
+                if (jsonArray != null && jsonArray.length() > 0) {
 
-                    for(Object o : jsonArray) {
-                        list.add((String) o);
+                    String[] s = new String[jsonArray.length()];
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        s[i] = jsonArray.getString(i);
                     }
 
-                    if (list.size() > 0) {
-                        map.put(key, (String[]) list.toArray());
-                    }
+                    map.put(key, s);
                 }
             }
         }
