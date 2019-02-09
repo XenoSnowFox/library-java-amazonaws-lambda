@@ -9,7 +9,8 @@ import java.util.Map;
 import java.util.Vector;
 
 /**
- * An Abstract implementation of the Response interface that implement all the common functionality (or functionality that doesn't normally alter between implementations).
+ * An Abstract implementation of the Response interface that implement all the common functionality
+ * (or functionality that doesn't normally alter between implementations).
  *
  * @since
  *      1.0.0
@@ -18,12 +19,23 @@ import java.util.Vector;
  */
 public abstract class AbstractResponse<T> implements Response<T> {
 
+    /**
+     * Indicated if the response if base 64 encoded.
+     */
     private boolean isBase64Encoded = false;
+
+    /**
+     * Response status.
+     */
     private ResponseStatus responseStatus = null;
+
+    /**
+     * Response headers.
+     */
     private Map<String, List<String>> headers = new HashMap<>();
 
     @Override
-    public final void setBase64Encoded(boolean isBase64Encoded) {
+    public final void setBase64Encoded(final boolean isBase64Encoded) {
         this.isBase64Encoded = isBase64Encoded;
     }
 
@@ -33,7 +45,7 @@ public abstract class AbstractResponse<T> implements Response<T> {
     }
 
     @Override
-    public final void setResponseStatus(ResponseStatus httpStatus) {
+    public final void setResponseStatus(final ResponseStatus httpStatus) {
         this.responseStatus = httpStatus;
     }
 
@@ -43,14 +55,14 @@ public abstract class AbstractResponse<T> implements Response<T> {
     }
 
     @Override
-    public void putHeader(final String header, final String value) {
+    public final void putHeader(final String header, final String value) {
         List<String> values = new Vector<>();
         values.add(value);
         headers.put(header, values);
     }
 
     @Override
-    public void addHeader(final String header, final String value) {
+    public final void addHeader(final String header, final String value) {
         if (headers.containsKey(header)) {
             List<String> values = headers.get(header);
             values.add(value);
@@ -60,12 +72,12 @@ public abstract class AbstractResponse<T> implements Response<T> {
     }
 
     @Override
-    public void removeHeader(final String header) {
+    public final void removeHeader(final String header) {
         headers.remove(header);
     }
 
     @Override
-    public Map<String, List<String>> getHeaders() {
+    public final Map<String, List<String>> getHeaders() {
         return headers;
     }
 

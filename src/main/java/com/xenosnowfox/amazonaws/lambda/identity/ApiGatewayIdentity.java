@@ -4,18 +4,25 @@ import com.xenosnowfox.amazonaws.lambda.Identity;
 import org.json.JSONObject;
 
 /**
- * Implementation of the Identity interface that is generated from a JSON Object
+ * Implementation of the Identity interface that is generated from a JSON Object.
  *
  * @since
  *      1.0.0
  */
 public class ApiGatewayIdentity implements Identity {
 
+    /**
+     * Source IP.
+     */
     private final String sourceIp;
+
+    /**
+     * User Agent.
+     */
     private final String userAgent;
 
     /**
-     * Instantiate a new instance from the data within the given JSON Object
+     * Instantiate a new instance from the data within the given JSON Object.
      *
      * @since
      *      1.0.0
@@ -31,19 +38,13 @@ public class ApiGatewayIdentity implements Identity {
         this.userAgent = jsonObject.optString("userAgent");
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
-    public String getSourceIp() {
+    public final String getSourceIp() {
         return this.sourceIp;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
-    public String getUserAgent() {
+    public final String getUserAgent() {
         return this.userAgent;
     }
 }

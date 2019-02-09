@@ -9,39 +9,85 @@ import org.json.JSONObject;
 import java.time.Instant;
 
 /**
- * Implementation of a RequestContext that parses it's data from a JSON object
+ * Implementation of a RequestContext that parses it's data from a JSON object.
  *
  * @since
  *      1.0.0
  */
 public class ApiGatewayRequestContext implements RequestContext {
 
-    // API Gateway variables
+    /**
+     * Stage name.
+     */
     private final String stage;
+
+    /**
+     * Account Id.
+     */
     private final String accountId;
+
+    /**
+     * API id.
+     */
     private final String apiId;
+
+    /**
+     * Resource Id.
+     */
     private final String resourceId;
+
+    /**
+     * Resporce Path.
+     */
     private final String resourcePath;
 
-    // Request variables
+    /**
+     * Request method.
+     */
     private final RequestMethod requestMethod;
+
+    /**
+     * Request protocol.
+     */
     private final String protocol;
+
+    /**
+     * Request Id.
+     */
     private final String requestId;
+
+    /**
+     * Extended Request Id.
+     */
     private final String extendedRequestId;
 
-    // source identity
+    /**
+     * Source Identity.
+     */
     private final Identity identity;
 
-    // domain name / uri
+    /**
+     * Domain Name.
+     */
     private final String domainName;
+
+    /**
+     * Domain prefix.
+     */
     private final String domainPrefix;
+
+    /**
+     * Path.
+     */
     private final String path;
 
-    // timestamp
+    /**
+     * Timestamp requested.
+     */
     private final Instant timestampRequested;
 
     /**
-     * Attempts to construct a new RequestContext from the given JSON Obect
+     * Attempts to construct a new RequestContext from the given JSON Object.
      *
      * @since
      *      1.0.0
@@ -109,72 +155,72 @@ public class ApiGatewayRequestContext implements RequestContext {
     }
 
     @Override
-    public String getResourceId() {
+    public final String getResourceId() {
         return this.resourceId;
     }
 
     @Override
-    public String getResourcePath() {
+    public final String getResourcePath() {
         return this.resourcePath;
     }
 
     @Override
-    public RequestMethod getRequestMethod() {
+    public final RequestMethod getRequestMethod() {
         return this.requestMethod;
     }
 
     @Override
-    public String getExtendedRequestId() {
+    public final String getExtendedRequestId() {
         return this.extendedRequestId;
     }
 
     @Override
-    public String getPath() {
+    public final String getPath() {
         return this.path;
     }
 
     @Override
-    public String getAccountId() {
+    public final String getAccountId() {
         return this.accountId;
     }
 
     @Override
-    public String getProtocol() {
+    public final String getProtocol() {
         return this.protocol;
     }
 
     @Override
-    public String getStage() {
+    public final String getStage() {
         return this.stage;
     }
 
     @Override
-    public String getDomainPrefix() {
+    public final String getDomainPrefix() {
         return this.domainPrefix;
     }
 
     @Override
-    public String getRequestId() {
+    public final String getRequestId() {
         return this.requestId;
     }
 
     @Override
-    public Identity getIdentity() {
+    public final Identity getIdentity() {
         return this.identity;
     }
 
     @Override
-    public String getDomainName() {
+    public final String getDomainName() {
         return this.domainName;
     }
 
     @Override
-    public String getApiId() {
+    public final String getApiId() {
         return this.apiId;
     }
 
     @Override
-    public Instant getTimestampRequested() {
+    public final Instant getTimestampRequested() {
         return this.timestampRequested;
     }
 }

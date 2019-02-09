@@ -1,7 +1,7 @@
 package com.xenosnowfox.amazonaws.lambda.response;
 
 /**
- * Implementation of a String response
+ * Implementation of a String response.
  *
  * This implementation pre-defines the `Content-Type` header as {@code text/plain}
  *
@@ -10,10 +10,13 @@ package com.xenosnowfox.amazonaws.lambda.response;
  */
 public class StringResponse extends AbstractResponse<String> {
 
+    /**
+     * String body content.
+     */
     private String bodyContent;
 
     /**
-     * Instantiates a new response where the body content is a plain text string
+     * Instantiates a new response where the body content is a plain text string.
      *
      * @since
      *      1.0.0
@@ -23,17 +26,17 @@ public class StringResponse extends AbstractResponse<String> {
     }
 
     @Override
-    public void setBody(String content) {
+    public final void setBody(final String content) {
         this.bodyContent = content;
     }
 
     @Override
-    public String getBody() {
+    public final String getBody() {
         return this.bodyContent;
     }
 
     @Override
-    public String getBodyAsString() {
+    public final String getBodyAsString() {
         return this.bodyContent;
     }
 }

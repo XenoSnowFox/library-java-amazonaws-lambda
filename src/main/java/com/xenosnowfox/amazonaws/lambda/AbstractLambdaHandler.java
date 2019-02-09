@@ -3,7 +3,7 @@ package com.xenosnowfox.amazonaws.lambda;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.xenosnowfox.amazonaws.lambda.http.ResponseStatus;
-import com.xenosnowfox.amazonaws.lambda.request.ApiGatewayRequest;
+import com.xenosnowfox.amazonaws.lambda.parser.ApiGatewayRequestParser;
 import com.xenosnowfox.amazonaws.lambda.response.StringResponse;
 
 import java.io.IOException;
@@ -31,6 +31,9 @@ import java.io.OutputStreamWriter;
  */
 public abstract class AbstractLambdaHandler implements RequestStreamHandler, LambdaHandler {
 
+    /**
+     * Stores the Context information.
+     */
     private Context context;
 
     /**
@@ -46,13 +49,13 @@ public abstract class AbstractLambdaHandler implements RequestStreamHandler, Lam
     /**
      * {@inheritDoc}
      */
-    public final void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
+    public final void handleRequest(final InputStream inputStream, final OutputStream outputStream, final Context context) throws IOException {
 
         // store the context for this request
         this.context = context;
 
         // parse the input stream
-        ApiGatewayRequest request = new ApiGatewayRequest(inputStream);
+        MutableRequest request = ApiGatewayRequestParser.parse(inputStream);
 
         // Invoke the request and obtain a response
         Response response;
@@ -78,13 +81,13 @@ public abstract class AbstractLambdaHandler implements RequestStreamHandler, Lam
             logMessage.append(e.getMessage());
             logMessage.append("\r\n\r\n");
             logMessage.append("Stacktrace: \r\n\t");
-            for(StackTraceElement ste : e.getStackTrace()) {
+            for (StackTraceElement ste : e.getStackTrace()) {
                 logMessage.append(ste.toString());
                 logMessage.append("\r\n\t");
             }
             logMessage.append("\r\n");
             logMessage.append("Request: \r\n");
-            logMessage.append(request.toJsonObject().toString(4));
+            logMessage.append(request.toJsonObject().toString());
 
             // log the error
             context.getLogger().log(logMessage.toString());
@@ -99,3 +102,4 @@ public abstract class AbstractLambdaHandler implements RequestStreamHandler, Lam
         writer.close();
     }
 }
+
