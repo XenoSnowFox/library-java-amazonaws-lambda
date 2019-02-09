@@ -3,7 +3,7 @@ package com.xenosnowfox.amazonaws.lambda;
 import org.json.JSONObject;
 
 /**
- * Immutable object that contains identity details of the source making the request
+ * Immutable object that contains identity details of the source making the request.
  *
  * @since
  *      1.0.0
@@ -11,7 +11,7 @@ import org.json.JSONObject;
 public interface Identity extends Jsonable {
 
     /**
-     * Obtains the source's IP address
+     * Obtains the source's IP address.
      *
      * @since
      *      1.0.0
@@ -31,7 +31,7 @@ public interface Identity extends Jsonable {
     String getUserAgent();
 
     /**
-     * Obtains a JSON Object representation of the instance
+     * Obtains a JSON Object representation of the instance.
      *
      * @since
      *      1.0.0

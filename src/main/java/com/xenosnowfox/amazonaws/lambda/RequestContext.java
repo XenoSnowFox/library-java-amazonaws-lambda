@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import java.time.Instant;
 
 /**
- * Immutable object that holds meta-data about the current request
+ * Immutable object that holds meta-data about the current request.
  *
  * @since
  *      1.0.0
@@ -14,7 +14,7 @@ import java.time.Instant;
 public interface RequestContext extends Jsonable {
 
     /**
-     * Obtains the HTTP Request Method used when making the request
+     * Obtains the HTTP Request Method used when making the request.
      *
      * @since
      *      1.0.0
@@ -24,7 +24,7 @@ public interface RequestContext extends Jsonable {
     RequestMethod getRequestMethod();
 
     /**
-     * Obtains the protocol used to make the request (eg: HTTP/1.1)
+     * Obtains the protocol used to make the request (eg: HTTP/1.1).
      *
      * @since
      *      1.0.0
@@ -34,7 +34,7 @@ public interface RequestContext extends Jsonable {
     String getProtocol();
 
     /**
-     * Obtains the name of the current stage as defined by Amazon AWS's API Gateway
+     * Obtains the name of the current stage as defined by Amazon AWS's API Gateway.
      *
      * @since
      *      1.0.0
@@ -44,7 +44,7 @@ public interface RequestContext extends Jsonable {
     String getStage();
 
     /**
-     * Obtains the identity of the resource from Amazon AWS's API Gateway
+     * Obtains the identity of the resource from Amazon AWS's API Gateway.
      *
      * @since
      *      1.0.0
@@ -54,7 +54,7 @@ public interface RequestContext extends Jsonable {
     String getResourceId();
 
     /**
-     * Obtains the path of the resource from Amazon AWS's API Gateway
+     * Obtains the path of the resource from Amazon AWS's API Gateway.
      *
      * @since
      *      1.0.0
@@ -64,7 +64,7 @@ public interface RequestContext extends Jsonable {
     String getResourcePath();
 
     /**
-     * Obtains the identity information of the source making the request
+     * Obtains the identity information of the source making the request.
      *
      * @since
      *      1.0.0
@@ -74,7 +74,7 @@ public interface RequestContext extends Jsonable {
     Identity getIdentity();
 
     /**
-     * Obtains the domain name used when making the request
+     * Obtains the domain name used when making the request.
      *
      * @since
      *      1.0.0
@@ -84,7 +84,7 @@ public interface RequestContext extends Jsonable {
     String getDomainName();
 
     /**
-     * Obtains the prefix portion of the domain name
+     * Obtains the prefix portion of the domain name.
      *
      * @since
      *      1.0.0
@@ -94,7 +94,7 @@ public interface RequestContext extends Jsonable {
     String getDomainPrefix();
 
     /**
-     * Obtains the path of the URI used to make the request
+     * Obtains the path of the URI used to make the request.
      *
      * @since
      *      1.0.0
@@ -104,7 +104,7 @@ public interface RequestContext extends Jsonable {
     String getPath();
 
     /**
-     * Obtains the account id that's executing the request
+     * Obtains the account id that's executing the request.
      *
      * @since
      *      1.0.0
@@ -114,7 +114,7 @@ public interface RequestContext extends Jsonable {
     String getAccountId();
 
     /**
-     * Obtains the API identifier string
+     * Obtains the API identifier string.
      *
      * @since
      *      1.0.0
@@ -124,7 +124,7 @@ public interface RequestContext extends Jsonable {
     String getApiId();
 
     /**
-     * Obtains a unique identifier for the request
+     * Obtains a unique identifier for the request.
      *
      * @since
      *      1.0.0
@@ -134,7 +134,7 @@ public interface RequestContext extends Jsonable {
     String getRequestId();
 
     /**
-     * Obtains the extended request id
+     * Obtains the extended request id.
      *
      * @since
      *      1.0.0
@@ -144,7 +144,7 @@ public interface RequestContext extends Jsonable {
     String getExtendedRequestId();
 
     /**
-     * Obtain the timestamp of when the request was made
+     * Obtain the timestamp of when the request was made.
      *
      * @since
      *      1.0.0
@@ -154,7 +154,7 @@ public interface RequestContext extends Jsonable {
     Instant getTimestampRequested();
 
     /**
-     * Obtains a JSON Object representation of the instance
+     * Obtains a JSON Object representation of the instance.
      *
      * @since
      *      1.0.0

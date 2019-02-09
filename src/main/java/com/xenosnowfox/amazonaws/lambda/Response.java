@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.List;
 
 /**
- * Response object that has been designed to be returned from an AWS Lambda function
+ * Response object that has been designed to be returned from an AWS Lambda function.
  *
  * @since
  *      1.0.0
@@ -47,7 +47,7 @@ public interface Response<T> {
     void setResponseStatus(final ResponseStatus responseStatus);
 
     /**
-     * Sets a header value, overriding any existing values for the defined header
+     * Sets a header value, overriding any existing values for the defined header.
      *
      * @since
      *      1.0.0
@@ -59,7 +59,8 @@ public interface Response<T> {
     void putHeader(final String header, final String value);
 
     /**
-     * Adds the given value against the specified header. This is used for Multi-value header items, in which a header may have multiple values against it.
+     * Adds the given value against the specified header.
+     * This is used for Multi-value header items, in which a header may have multiple values against it.
      *
      * @since
      *      1.0.0
@@ -81,7 +82,7 @@ public interface Response<T> {
     void removeHeader(final String header);
 
     /**
-     * Returns a map of all the header values defined for this response
+     * Returns a map of all the header values defined for this response.
      *
      * @since
      *      1.0.0
@@ -102,7 +103,7 @@ public interface Response<T> {
     ResponseStatus getResponseStatus();
 
     /**
-     * Sets the content of the response body
+     * Sets the content of the response body.
      *
      * @since
      *      1.0.0
@@ -112,7 +113,7 @@ public interface Response<T> {
     void setBody(final T content);
 
     /**
-     * Obtains the current content of the response body
+     * Obtains the current content of the response body.
      *
      * @since
      *      1.0.0
@@ -132,7 +133,7 @@ public interface Response<T> {
     String getBodyAsString();
 
     /**
-     * Compiles the response into a JSON String that can be sent to the Lambda Handler's OutputStream
+     * Compiles the response into a JSON String that can be sent to the Lambda Handler's OutputStream.
      *
      * @since
      *      1.0.0

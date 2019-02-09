@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import java.util.Map;
 
 /**
- * Immutable Request object that is parsed from the Lambda input stream
+ * Immutable Request object that is parsed from the Lambda input stream.
  *
  * @since
  *      1.0.0
@@ -14,7 +14,7 @@ import java.util.Map;
 public interface Request extends Jsonable {
 
     /**
-     * Obtains the HTTP request method used to make the request
+     * Obtains the HTTP request method used to make the request.
      *
      * @since
      *      1.0.0
@@ -24,7 +24,7 @@ public interface Request extends Jsonable {
     RequestMethod getRequestMethod();
 
     /**
-     * Obtains the URI path of the request
+     * Obtains the URI path of the request.
      *
      * @since
      *      1.0.0
@@ -34,7 +34,7 @@ public interface Request extends Jsonable {
     String getPath();
 
     /**
-     * Obtains a map of header values from the request
+     * Obtains a map of header values from the request.
      *
      * @since
      *      1.0.0
@@ -44,7 +44,7 @@ public interface Request extends Jsonable {
     Map<String, String[]> getHeaders();
 
     /**
-     * Obtains the values for the given header name
+     * Obtains the values for the given header name.
      *
      * @param header
      *      name of the header item to retrieve
@@ -54,7 +54,7 @@ public interface Request extends Jsonable {
     String[] getHeader(final String header);
 
     /**
-     * Obtains a map of query string parameters from the request
+     * Obtains a map of query string parameters from the request.
      *
      * @since
      *      1.0.0
@@ -64,7 +64,7 @@ public interface Request extends Jsonable {
     Map<String, String[]> getQueryStringParameters();
 
     /**
-     * Obtains the values for the given query string parameter name
+     * Obtains the values for the given query string parameter name.
      *
      * @param parameter
      *      name of the query string parameter to retrieve
@@ -74,7 +74,7 @@ public interface Request extends Jsonable {
     String[] getQueryStringParameter(final String parameter);
 
     /**
-     * Obtains a map of path parameters
+     * Obtains a map of path parameters.
      *
      * @since
      *      1.0.0
@@ -84,7 +84,7 @@ public interface Request extends Jsonable {
     Map<String, String> getPathParameters();
 
     /**
-     * Obtains the value for the given path parameter name
+     * Obtains the value for the given path parameter name.
      *
      * @param parameter
      *      name of the path parameter to retrieve
@@ -94,7 +94,8 @@ public interface Request extends Jsonable {
     String getPathParameter(final String parameter);
 
     /**
-     * Obtains a map of stage variables (usually generated from API Gateway) which can be used as an alternative to Environment variables
+     * Obtains a map of stage variables (usually generated from API Gateway) which can be used as an alternative
+     * to Environment variables.
      *
      * @since
      *      1.0.0
@@ -104,7 +105,7 @@ public interface Request extends Jsonable {
     Map<String, String> getStageVariables();
 
     /**
-     * Obtains the value for the given stage variable name
+     * Obtains the value for the given stage variable name.
      *
      * @param variable
      *      name of the stage variable to retrieve
@@ -144,7 +145,7 @@ public interface Request extends Jsonable {
     RequestContext getRequestContext();
 
     /**
-     * Obtains a JSON Object representation of the instance
+     * Obtains a JSON Object representation of the instance.
      *
      * @since
      *      1.0.0

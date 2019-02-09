@@ -1,7 +1,7 @@
 package com.xenosnowfox.amazonaws.lambda;
 
 /**
- * Denotes a class that can process Lambda requests
+ * Denotes a class that can process Lambda requests.
  */
 public interface LambdaHandler {
     /**

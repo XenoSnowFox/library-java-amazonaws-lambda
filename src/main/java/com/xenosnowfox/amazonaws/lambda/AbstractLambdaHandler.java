@@ -14,7 +14,7 @@ import java.io.OutputStreamWriter;
 /**
  * Implementation wrapper of the AWS request stream.
  * This class can be extended to provide your specific implementation.
- * Note: this class is NOT thread-safe
+ * Note: this class is NOT thread-safe.
  *
  * <pre><code>
  *     package com.example.myhandler;
@@ -34,7 +34,7 @@ public abstract class AbstractLambdaHandler implements RequestStreamHandler, Lam
     private Context context;
 
     /**
-     * Obtains the current Lambda Context provided by Amazon AWS
+     * Obtains the current Lambda Context provided by Amazon AWS.
      *
      * @return
      *      Amazon AWS's Lambda Context object
