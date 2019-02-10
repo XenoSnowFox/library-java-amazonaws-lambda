@@ -3,7 +3,6 @@ package com.xenosnowfox.amazonaws.lambda.request.parser;
 import com.xenosnowfox.amazonaws.lambda.request.MutableRequest;
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
 import com.xenosnowfox.amazonaws.lambda.request.MutableRequestImpl;
-import com.xenosnowfox.amazonaws.lambda.request.requestcontext.ApiGatewayRequestContext;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -105,7 +104,7 @@ public final class ApiGatewayRequestParser {
         // parse the request context object
         JSONObject j = jsonObject.optJSONObject("requestContext");
         if (j != null) {
-            request.setRequestContext(new ApiGatewayRequestContext(j));
+            request.setRequestContext(ApiGatewayRequestContextParser.parse(j));
         }
 
         // return the newly parse request

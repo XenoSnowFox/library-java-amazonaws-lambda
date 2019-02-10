@@ -63,13 +63,41 @@ public class MutableRequestImpl implements MutableRequest {
     public MutableRequestImpl() { }
 
     /**
-     * Instantiates a copy of another request.
+     * Instantiates a deep copy of another request.
      *
      * @param other
      *      Request to copy.
      */
     public MutableRequestImpl(final Request other) {
+        this.setRequestMethod(other.getRequestMethod());
+        this.setPath(other.getPath());
+        this.setBase64Encoded(other.isBase64Encoded());
+        this.setBody(other.getBody());
+        this.setRequestContext(new MutableRequestContextImpl(other.getRequestContext()));
 
+        // query string params
+        for (Map.Entry<String, String[]> entry : other.getQueryStringParameters().entrySet()) {
+            for (String value : entry.getValue()) {
+                this.putQueryStringParameter(entry.getKey(), value);
+            }
+        }
+
+        // headers
+        for (Map.Entry<String, String[]> entry : other.getHeaders().entrySet()) {
+            for (String value : entry.getValue()) {
+                this.putHeader(entry.getKey(), value);
+            }
+        }
+
+        // stage variables
+        for (Map.Entry<String, String> entry : other.getStageVariables().entrySet()) {
+            this.putStageVariable(entry.getKey(), entry.getValue());
+        }
+
+        // path parameters
+        for (Map.Entry<String, String> entry : other.getPathParameters().entrySet()) {
+            this.putPathParameter(entry.getKey(), entry.getValue());
+        }
     }
 
     @Override

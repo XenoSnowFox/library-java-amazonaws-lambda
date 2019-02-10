@@ -17,7 +17,7 @@ public class RouterImpl implements Router {
     private List<Route> routes = new Vector<>();
 
     @Override
-    public boolean removeRoute(Route route) {
+    public final boolean removeRoute(final Route route) {
         return this.routes.remove(route);
     }
 
