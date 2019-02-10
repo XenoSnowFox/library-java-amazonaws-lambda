@@ -1,6 +1,6 @@
 package com.xenosnowfox.amazonaws.lambda.response;
 
-import com.xenosnowfox.amazonaws.lambda.Jsonable;
+import com.xenosnowfox.amazonaws.lambda.util.Jsonable;
 
 /**
  * Implementation of a JSON Response object where the body content is a class that implements the

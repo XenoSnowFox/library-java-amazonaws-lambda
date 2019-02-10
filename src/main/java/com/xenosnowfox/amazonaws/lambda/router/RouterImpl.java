@@ -1,7 +1,7 @@
 package com.xenosnowfox.amazonaws.lambda.router;
 
 import com.xenosnowfox.amazonaws.lambda.request.Request;
-import com.xenosnowfox.amazonaws.lambda.Response;
+import com.xenosnowfox.amazonaws.lambda.response.Response;
 
 import java.util.List;
 import java.util.Vector;

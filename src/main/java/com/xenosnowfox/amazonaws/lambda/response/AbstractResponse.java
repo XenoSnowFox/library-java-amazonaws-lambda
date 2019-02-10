@@ -1,6 +1,5 @@
 package com.xenosnowfox.amazonaws.lambda.response;
 
-import com.xenosnowfox.amazonaws.lambda.Response;
 import com.xenosnowfox.amazonaws.lambda.http.ResponseStatus;
 
 import java.util.HashMap;

@@ -5,6 +5,7 @@ import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.xenosnowfox.amazonaws.lambda.http.ResponseStatus;
 import com.xenosnowfox.amazonaws.lambda.request.parser.ApiGatewayRequestParser;
 import com.xenosnowfox.amazonaws.lambda.request.MutableRequest;
+import com.xenosnowfox.amazonaws.lambda.response.Response;
 import com.xenosnowfox.amazonaws.lambda.response.StringResponse;
 
 import java.io.IOException;

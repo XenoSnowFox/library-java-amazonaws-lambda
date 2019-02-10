@@ -1,4 +1,4 @@
-package com.xenosnowfox.amazonaws.lambda;
+package com.xenosnowfox.amazonaws.lambda.util;
 
 import org.json.JSONObject;
 

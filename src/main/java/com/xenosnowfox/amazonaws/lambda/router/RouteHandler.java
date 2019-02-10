@@ -1,7 +1,7 @@
 package com.xenosnowfox.amazonaws.lambda.router;
 
 import com.xenosnowfox.amazonaws.lambda.request.Request;
-import com.xenosnowfox.amazonaws.lambda.Response;
+import com.xenosnowfox.amazonaws.lambda.response.Response;
 
 /**
  * Represents an object that is capable of handling a {@link Request} and possibly returning a {@link Response}.

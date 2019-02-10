@@ -1,4 +1,4 @@
-package com.xenosnowfox.amazonaws.lambda;
+package com.xenosnowfox.amazonaws.lambda.response;
 
 import com.xenosnowfox.amazonaws.lambda.http.ResponseStatus;
 import org.json.JSONObject;
