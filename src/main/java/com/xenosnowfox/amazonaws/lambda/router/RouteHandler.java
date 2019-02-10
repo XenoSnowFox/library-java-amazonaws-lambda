@@ -12,12 +12,12 @@ public interface RouteHandler {
      * Calls on the route to attempt to handle a given request.
      * If no response is returned, then the request is passed on to the next route that is capable of handling it.
      *
-     * @param route
-     *      The {@link Route} calling the handler.
+     * @param context
+     *      The {@link RouteContext} of the current route.
      * @param request
      *      Request to handle.
      * @return
      *      A {@link Response} object of {@code null} if the handle doesn't return a response.
      */
-    Response handle(final Route route, final Request request);
+    Response handle(final RouteContext context, final Request request);
 }

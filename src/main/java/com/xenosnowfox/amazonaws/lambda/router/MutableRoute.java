@@ -13,6 +13,19 @@ public interface MutableRoute extends Route {
     void clearRequestMethods();
 
     /**
+     * Fluent call that adds the given {@link RequestMethod} to the route.
+     *
+     * @param requestMethod
+     *      {@link RequestMethod}.
+     * @return
+     *      This instance so that it may be called fluently.
+     */
+    default MutableRoute requestMethod(final RequestMethod requestMethod) {
+        this.addRequestMethod(requestMethod);
+        return this;
+    }
+
+    /**
      * Adds the given {@link RequestMethod} to the list of possible methods this route is capable of handling.
      *
      * @param requestMethod
@@ -37,8 +50,34 @@ public interface MutableRoute extends Route {
      *
      * @param handler
      *      {@link RouteHandler}.
+     * @return
+     *      This instance so that it may be called fluently.
+     */
+    default MutableRoute handler(final RouteHandler handler) {
+        this.setRouteHandler(handler);
+        return this;
+    }
+
+    /**
+     * Defines the handler method for this route.
+     *
+     * @param handler
+     *      {@link RouteHandler}.
      */
     void setRouteHandler(final RouteHandler handler);
+
+    /**
+     * Defines the partial URI path for this route.
+     *
+     * @param path
+     *      Partial URI path.
+     * @return
+     *      This instance so that it may be called fluently.
+     */
+    default MutableRoute path(final String path) {
+        this.setPath(path);
+        return this;
+    }
 
     /**
      * Defines the partial URI path for this route.
