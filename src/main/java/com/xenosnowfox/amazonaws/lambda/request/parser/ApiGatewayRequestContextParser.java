@@ -2,7 +2,6 @@ package com.xenosnowfox.amazonaws.lambda.request.parser;
 
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
 import com.xenosnowfox.amazonaws.lambda.request.MutableRequestContext;
-import com.xenosnowfox.amazonaws.lambda.request.identity.ApiGatewayIdentity;
 import com.xenosnowfox.amazonaws.lambda.request.MutableRequestContextImpl;
 import org.json.JSONObject;
 
@@ -73,7 +72,7 @@ public final class ApiGatewayRequestContextParser {
         // parse the identity sub-object
         JSONObject j = jsonObject.optJSONObject("identity");
         if (j != null) {
-            context.setIdentity(new ApiGatewayIdentity(j));
+            context.setIdentity(ApiGatewayIdentityParser.parse(j));
         }
 
         // parse the timestamp
