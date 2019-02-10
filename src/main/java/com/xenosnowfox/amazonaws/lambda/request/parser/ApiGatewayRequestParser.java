@@ -1,9 +1,9 @@
-package com.xenosnowfox.amazonaws.lambda.parser;
+package com.xenosnowfox.amazonaws.lambda.request.parser;
 
-import com.xenosnowfox.amazonaws.lambda.MutableRequest;
+import com.xenosnowfox.amazonaws.lambda.request.MutableRequest;
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
 import com.xenosnowfox.amazonaws.lambda.request.MutableRequestImpl;
-import com.xenosnowfox.amazonaws.lambda.requestcontext.ApiGatewayRequestContext;
+import com.xenosnowfox.amazonaws.lambda.request.requestcontext.ApiGatewayRequestContext;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;

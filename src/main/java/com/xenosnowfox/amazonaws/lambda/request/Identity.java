@@ -1,5 +1,6 @@
-package com.xenosnowfox.amazonaws.lambda;
+package com.xenosnowfox.amazonaws.lambda.request;
 
+import com.xenosnowfox.amazonaws.lambda.Jsonable;
 import org.json.JSONObject;
 
 /**

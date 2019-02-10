@@ -1,6 +1,6 @@
 package com.xenosnowfox.amazonaws.lambda.router;
 
-import com.xenosnowfox.amazonaws.lambda.Request;
+import com.xenosnowfox.amazonaws.lambda.request.Request;
 import com.xenosnowfox.amazonaws.lambda.Response;
 
 /**

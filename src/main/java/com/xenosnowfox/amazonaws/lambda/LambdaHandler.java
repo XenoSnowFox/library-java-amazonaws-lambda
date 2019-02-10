@@ -1,5 +1,7 @@
 package com.xenosnowfox.amazonaws.lambda;
 
+import com.xenosnowfox.amazonaws.lambda.request.Request;
+
 /**
  * Denotes a class that can process Lambda requests.
  */

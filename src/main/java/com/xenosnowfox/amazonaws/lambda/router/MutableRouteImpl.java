@@ -1,6 +1,6 @@
 package com.xenosnowfox.amazonaws.lambda.router;
 
-import com.xenosnowfox.amazonaws.lambda.Request;
+import com.xenosnowfox.amazonaws.lambda.request.Request;
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
 
 import java.util.HashSet;
@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * Abstract implementation of a {@link Route}, that handles some basic request evaluation.
  */
-public class SimpleRoute implements Route {
+public class MutableRouteImpl implements MutableRoute {
 
     /**
      * The route handler.
@@ -67,7 +67,7 @@ public class SimpleRoute implements Route {
     }
 
     @Override
-    public final boolean canHandle(final Request request) {
+    public final boolean matches(final Request request) {
         return
                 (this.requestMethods.size() == 0 || this.requestMethods.contains(request.getRequestMethod()))
                 ;

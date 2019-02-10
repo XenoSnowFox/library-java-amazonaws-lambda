@@ -1,6 +1,6 @@
-package com.xenosnowfox.amazonaws.lambda.identity;
+package com.xenosnowfox.amazonaws.lambda.request.identity;
 
-import com.xenosnowfox.amazonaws.lambda.Identity;
+import com.xenosnowfox.amazonaws.lambda.request.Identity;
 import org.json.JSONObject;
 
 /**

@@ -1,6 +1,6 @@
 package com.xenosnowfox.amazonaws.lambda.router;
 
-import com.xenosnowfox.amazonaws.lambda.Request;
+import com.xenosnowfox.amazonaws.lambda.request.Request;
 import com.xenosnowfox.amazonaws.lambda.Response;
 
 import java.util.List;
@@ -9,12 +9,17 @@ import java.util.Vector;
 /**
  * Basic implementation of a Router.
  */
-public class SimpleRouter extends SimpleRoute implements Router {
+public class RouterImpl implements Router {
 
     /**
      * Collection of routes for this router.
      */
     private List<Route> routes = new Vector<>();
+
+    @Override
+    public boolean removeRoute(Route route) {
+        return this.routes.remove(route);
+    }
 
     @Override
     public final void addRoute(final Route route) {
@@ -27,6 +32,11 @@ public class SimpleRouter extends SimpleRoute implements Router {
 
     @Override
     public final Response handle(final Route route, final Request request) {
+
+
+
+
+
         return null;
     }
 }

@@ -1,6 +1,8 @@
-package com.xenosnowfox.amazonaws.lambda;
+package com.xenosnowfox.amazonaws.lambda.request;
 
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
+import com.xenosnowfox.amazonaws.lambda.request.Request;
+import com.xenosnowfox.amazonaws.lambda.request.RequestContext;
 
 /**
  * Represents a mutable version of a request.

@@ -1,9 +1,9 @@
-package com.xenosnowfox.amazonaws.lambda.requestcontext;
+package com.xenosnowfox.amazonaws.lambda.request.requestcontext;
 
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
-import com.xenosnowfox.amazonaws.lambda.Identity;
-import com.xenosnowfox.amazonaws.lambda.RequestContext;
-import com.xenosnowfox.amazonaws.lambda.identity.ApiGatewayIdentity;
+import com.xenosnowfox.amazonaws.lambda.request.Identity;
+import com.xenosnowfox.amazonaws.lambda.request.RequestContext;
+import com.xenosnowfox.amazonaws.lambda.request.identity.ApiGatewayIdentity;
 import org.json.JSONObject;
 
 import java.time.Instant;

@@ -3,7 +3,8 @@ package com.xenosnowfox.amazonaws.lambda;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.xenosnowfox.amazonaws.lambda.http.ResponseStatus;
-import com.xenosnowfox.amazonaws.lambda.parser.ApiGatewayRequestParser;
+import com.xenosnowfox.amazonaws.lambda.request.parser.ApiGatewayRequestParser;
+import com.xenosnowfox.amazonaws.lambda.request.MutableRequest;
 import com.xenosnowfox.amazonaws.lambda.response.StringResponse;
 
 import java.io.IOException;

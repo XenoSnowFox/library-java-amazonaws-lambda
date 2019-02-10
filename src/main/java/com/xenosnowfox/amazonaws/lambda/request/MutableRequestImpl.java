@@ -1,8 +1,5 @@
 package com.xenosnowfox.amazonaws.lambda.request;
 
-import com.xenosnowfox.amazonaws.lambda.MutableRequest;
-import com.xenosnowfox.amazonaws.lambda.Request;
-import com.xenosnowfox.amazonaws.lambda.RequestContext;
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
 
 import java.util.HashMap;
