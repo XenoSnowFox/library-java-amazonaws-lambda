@@ -1,22 +1,13 @@
 package com.xenosnowfox.amazonaws.lambda.router;
 
-import com.xenosnowfox.amazonaws.lambda.request.Request;
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
+
+import java.util.Set;
 
 /**
  * Represents an endpoint/route.
  */
 public interface Route {
-    /**
-     * Evaluates whether this route is capable of satisfying the incoming request.
-     *
-     * @param request
-     *      Request to handle.
-     * @return
-     *      {@code true} if the route can handle the request, {@code false} otherwise.
-     */
-    boolean matches(final Request request);
-
 
     /**
      * Returns {@code true} this the {@link Route} is capable of handling a request with the given {@link RequestMethod}.
@@ -28,6 +19,14 @@ public interface Route {
      *      {@code false} otherwise
      */
     boolean containsRequestMethod(final RequestMethod requestMethod);
+
+    /**
+     * Obtains a Set of Request methods defined on the route.
+     *
+     * @return
+     *      Set of {@link RequestMethod}.
+     */
+    Set<RequestMethod> getRequestMethods();
 
     /**
      * Obtains the {@link RouteHandler} assigned to this instance.

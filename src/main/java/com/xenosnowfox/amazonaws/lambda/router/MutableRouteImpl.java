@@ -1,6 +1,5 @@
 package com.xenosnowfox.amazonaws.lambda.router;
 
-import com.xenosnowfox.amazonaws.lambda.request.Request;
 import com.xenosnowfox.amazonaws.lambda.http.RequestMethod;
 
 import java.util.HashSet;
@@ -67,9 +66,7 @@ public class MutableRouteImpl implements MutableRoute {
     }
 
     @Override
-    public final boolean matches(final Request request) {
-        return
-                (this.requestMethods.size() == 0 || this.requestMethods.contains(request.getRequestMethod()))
-                ;
+    public final Set<RequestMethod> getRequestMethods() {
+        return new HashSet<>(requestMethods);
     }
 }
