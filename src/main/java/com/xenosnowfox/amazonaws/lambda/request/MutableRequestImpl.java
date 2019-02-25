@@ -311,7 +311,7 @@ public class MutableRequestImpl implements MutableRequest {
 
     @Override
     public final String getStageVariable(final String variable) {
-        return this.pathParameters.get(variable);
+        return this.stageVariables.get(variable);
     }
 
     @Override
